@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Chiapas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Discover Chiapas</h1>
+      </header>
+      <main>
+        <div class="input-section">
+          <div class="input-location">
+            <div class="input-location-info">
+              <label for="location">Ingresar zona:</label>
+              <input type="text" id="location" placeholder="Ingresa las zonas separados por coma" />
+            </div>
+            <button type="button" id="addZone">Agregar zona</button>
+          </div>
+          <div class="input-distance">
+            <h2>Agregar distancia entre las zonas</h2>
+            <div class="info-firstZone">
+              <label for="zona1">Zona:</label>
+              <input type="text" id="zone1" placeholder="Ingresa la primer zona" />
+            </div>
+            <div class="information-second-zone">
+              <label for="zone2">Zona:</label>
+              <input type="text" id="zone2" placeholder="Ingresa la zona siguiente" />
+            </div>
+            <div class="information-three">
+              <label for="distance">Ingresa la distancia:</label>
+              <input type="text" id="distance" placeholder="Ingresar distancia"/>
+            </div>
+            <button type="button" id="btn_addDistance">
+              Agregar distancia
+            </button>
+          </div>
+          <div class="show-routes">
+            <div class="actionsZone">
+              <label for="nodeInit"
+              >Lugar para iniciar el recorrido:</label
+            >
+            <input type="text" id="nodeInit" placeholder="Ingresa el lugar" />
+            </div>
+            <button type="button" id="btn-show">
+              Mostrar las zonas ingresadas
+            </button>
+          </div>
+        </div>
+        <div class="references-dfs">
+          <div class="table-conections">
+            <table id="zonesTable">
+              <thead>
+                <tr>
+                  <th>Lugares</th>
+                </tr>
+              </thead>
+              <tbody id="body-table"></tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="/src/controllers/script.mjs" type="module"></script>
+  </body>
+</html>
